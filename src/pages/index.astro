@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="text-center flex justify-center items-center gap-40 my-10 p-8">
+    <div class="w-200 rounded-lg text-left text-2xl">
+      <p class="text-gray-400 mb-4">
+        Como estudiante de Ingeniería en Sistemas, soy un entusiasta del
+        desarrollo e implementación de soluciones tecnológicas que permiten a
+        los negocios alcanzar el impacto que buscan.
+      </p>
+      <p class="text-gray-400 mb-4">
+        Me especializo en el desarrollo web full stack, trabajando con
+        tecnologías de vanguardia con facilidad de aprendizaje para adaptarme a
+        nuevas tecnologías.
+      </p>
+      <p class="text-gray-400 mb-4">
+        A lo largo de mi formación académica, he participado en proyectos que
+        abarcan todas las etapas del ciclo de vida del desarrollo de software.
+        Desde el análisis y levantamiento de requerimientos, hasta el diseño,
+        desarrollo, pruebas, implementación y mantenimiento.
+      </p>
+      <p class="text-gray-400">
+        Cada proyecto que implemento representa una oportunidad de aprendizaje
+        que me motiva a profundizar en los objetivos del negocio y a comprender
+        mejor el pensamiento crítico de los colaboradores en las distintas
+        unidades.
+      </p>
+    </div>
+    <Image src="/assets/elmer.jpg" alt="Elmer" width={400} height={400} />
+  </div>
+
+  
+  
 </Layout>
