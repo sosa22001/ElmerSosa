@@ -1,0 +1,12 @@
+<p class="text-gray-400 mb-4">
+        A lo largo de mi formación académica, he participado en proyectos que
+        abarcan todas las etapas del ciclo de vida del desarrollo de software.
+        Desde el análisis y levantamiento de requerimientos, hasta el diseño,
+        desarrollo, pruebas, implementación y mantenimiento.
+      </p>
+      <p class="text-gray-400">
+        Cada proyecto que implemento representa una oportunidad de aprendizaje
+        que me motiva a profundizar en los objetivos del negocio y a comprender
+        mejor el pensamiento crítico de los colaboradores en las distintas
+        unidades.
+      </p>
