@@ -2,44 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Cards from "../components/Cards.astro";
+
+import { cards } from '../content/data/db.ts';
+
+
 ---
 
 <Layout>
   <div class="w-full h-full ">
-    <div class="flex justify-start items-start text-center gap-40 mt-10 p-8">
-      <div
-        class="w-150 rounded-3xl text-left text-lg bg-zinc-900 p-5 shadow-lg border border-gray-700"
-      >
-        <p class="text-white mb-4">
-          🚀 Como <span class="text-blue-400 font-semibold"
-            >estudiante de Ingeniería en Sistemas</span
-          >, soy un
-          <span class="text-green-400 font-semibold"
-            >apasionado del desarrollo</span
-          > y la
-          <span class="text-yellow-400 font-semibold"
-            >implementación de soluciones tecnológicas</span
-          >
-          que permiten a los negocios alcanzar el impacto que buscan.
-        </p>
-        <p class="text-gray-300 mb-4">
-          💻 Me especializo en el <span class="text-purple-400 font-semibold"
-            >desarrollo web full stack</span
-          >, trabajando con <span class="text-orange-400 font-semibold"
-            >tecnologías de vanguardia</span
-          >. Tengo una gran capacidad de aprendizaje 📚 para adaptarme a
-          <span class="text-pink-400 font-semibold">nuevas tecnologías</span> y desafíos.
-        </p>
-      </div>
-
+    <div class="flex flex-row items-start text-center gap-20 mt-10 p-8">
+      <Cards title={cards[0].title}, description = {cards[0].description} class="w-150"/>
       <Image
-        src="/assets/elmer.jpg"
+        src="/assets/Elmer.JPG"
         alt="Elmer"
         width={200}
         height={200}
-        class="rounded-full shadow-2xl border-4 border-blue-500 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
+        class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
       />
     </div>
     
@@ -47,34 +26,20 @@ import { Image } from "astro:assets";
       <h2 class="text-xl font-bold text-white mb-6 text-left ml-2">Del Aprendizaje a la Implementación</h2>
       
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Tarjeta 1 -->
-        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
-          <h3 class="text-xl font-bold text-yellow-400 mb-3">🎓 Formación Académica</h3>
-          <p class="text-gray-300">
-            A lo largo de mi <span class="text-blue-400 font-semibold">formación académica</span>, he participado en 
-            <span class="text-green-400 font-semibold">proyectos</span> que abarcan todas las etapas del ciclo de vida del 
-            <span class="text-red-400 font-semibold">desarrollo de software</span>. Desde el <span class="text-yellow-300 font-semibold">análisis</span> y 
-            <span class="text-purple-400 font-semibold">levantamiento de requerimientos</span>, hasta el 
-            <span class="text-pink-400 font-semibold">diseño, desarrollo, pruebas, implementación y mantenimiento</span>.
-          </p>
-        </div>
-    
-        <!-- Tarjeta 2 -->
-        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
-          <h3 class="text-xl font-bold text-yellow-400 mb-3">📚 Aprendizaje y Desarrollo</h3>
-          <p class="text-gray-300">
-            Cada <span class="text-green-400 font-semibold">proyecto</span> que implemento representa una 
-            <span class="text-blue-400 font-semibold">oportunidad de aprendizaje</span> que me motiva a profundizar en los 
-            <span class="text-red-400 font-semibold">objetivos del negocio</span> y a comprender mejor el 
-            <span class="text-yellow-300 font-semibold">pensamiento crítico</span> de los colaboradores en las distintas unidades.
-          </p>
-        </div>
+        {
+          cards.slice(1).map((card)=>(
+            <Cards
+              title={card.title}
+              description ={card.description}
+            />
+            ))
+        }
       </div>
     </section>
     
     <section class="p-14">
       <h2 class="text-4xl font-bold text-white text-center ml-2 mb-8">Hábilidades </h2>
-      <h2 class="text-xl font-bold text-white text-left ml-2 mb-8">Gestión de equipos y </h2>
+      <h2 class="text-xl font-bold text-white text-left ml-2 mb-4">Gestión de equipos y </h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-zinc-900 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
           <h3 class="text-lg font-bold text-blue-400">🎤 Oratoria</h3>
@@ -92,8 +57,7 @@ import { Image } from "astro:assets";
     </section>
     
     <section class="p-14">
-      <h2 class="text-xl font-bold text-white text-left mb-8">Frontend</h2>
-    
+      <h2 class="text-xl font-bold text-white text-left mb-4 ml-2">Frontend</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <!-- Tarjeta Vue.js -->
         <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
@@ -145,13 +109,13 @@ import { Image } from "astro:assets";
       </div>
     </section>
 
-    <section class="">
-      <h2 class="text-xl text-left font-bold">Backend y Base de datos</h2>
+    <section class="p-14">
+      <h2 class="text-xl text-left font-bold text-white mb-4 ml-2">Backend</h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Bootstrap" class="w-12 mx-auto">
-          <h3 class="text-lg font-bold text-green-600 mt-2">Nodejs y Express</h3>
+            <h3 class="text-base font-bold text-green-600 mt-2">Nodejs y Express</h3>
           <div class="relative pt-1">
             <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
               <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-700"></div>
@@ -162,7 +126,7 @@ import { Image } from "astro:assets";
   
         <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="Bootstrap" class="w-12 mx-auto">
-          <h3 class="text-lg font-bold text-blue-400 mt-2">Typescript</h3>
+          <h3 class="text-base font-bold text-blue-400 mt-2">Typescript</h3>
           <div class="relative pt-1">
             <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
               <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-400"></div>
@@ -173,7 +137,7 @@ import { Image } from "astro:assets";
 
         <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Bootstrap" class="w-12 mx-auto">
-          <h3 class="text-lg font-bold text-green-300 mt-2">SpringBoot</h3>
+          <h3 class="text-base font-bold text-green-300 mt-2">SpringBoot</h3>
           <div class="relative pt-1">
             <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
               <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300"></div>
@@ -181,8 +145,81 @@ import { Image } from "astro:assets";
             <span class="text-sm text-gray-300">50%</span>
           </div>
         </div>
+
+        <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Bootstrap" class="w-12 mx-auto">
+          <h3 class="text-base font-bold text-red-400 mt-2">Laravel</h3>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+              <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-400"></div>
+            </div>
+            <span class="text-sm text-gray-300">50%</span>
+          </div>
+        </div>
       </div>
     </section>
     
+    <section class="p-14">
+      <h2 class="text-xl text-left font-bold text-white mb-4 ml-2">Base de datos</h2>
+        
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div>
+          <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Bootstrap" class="w-12 mx-auto">
+            <h3 class="text-base font-bold text-blue-400 mt-2">MySQL</h3>
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+                <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-400"></div>
+              </div>
+              <span class="text-sm text-gray-300">50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="w-12 mx-auto">
+          <h3 class="text-base font-bold text-red-600 mt-2">SQL Server</h3>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+              <div style="width:50%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+            </div>
+            <span class="text-sm text-gray-300">50%</span>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" class="w-12 mx-auto">
+          <h3 class="text-base font-bold text-red-400 mt-2">Oracle</h3>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+              <div style="width:60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-400"></div>
+            </div>
+            <span class="text-sm text-gray-300">60%</span>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-12 mx-auto">
+          <h3 class="text-base font-bold text-green-400 mt-2">MongoDB</h3>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+              <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-400"></div>
+            </div>
+            <span class="text-sm text-gray-300">45%</span>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-4 rounded-xl shadow-lg border border-gray-700 text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Supabase" class="w-12 mx-auto">
+          <h3 class="text-base font-bold text-green-300 mt-2">Supabase</h3>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-gray-700">
+              <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300"></div>
+            </div>
+            <span class="text-sm text-gray-300">45%</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>

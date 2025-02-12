@@ -1,12 +1,23 @@
-<p class="text-gray-400 mb-4">
-        A lo largo de mi formación académica, he participado en proyectos que
-        abarcan todas las etapas del ciclo de vida del desarrollo de software.
-        Desde el análisis y levantamiento de requerimientos, hasta el diseño,
-        desarrollo, pruebas, implementación y mantenimiento.
-      </p>
-      <p class="text-gray-400">
-        Cada proyecto que implemento representa una oportunidad de aprendizaje
-        que me motiva a profundizar en los objetivos del negocio y a comprender
-        mejor el pensamiento crítico de los colaboradores en las distintas
-        unidades.
-      </p>
+
+<!-- Tarjeta 1 -->
+        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-yellow-400 mb-3">🎓 Formación Académica</h3>
+          <p class="text-gray-300">
+            A lo largo de mi <span class="text-blue-400 font-semibold">formación académica</span>, he participado en 
+            <span class="text-green-400 font-semibold">proyectos</span> que abarcan todas las etapas del ciclo de vida del 
+            <span class="text-red-400 font-semibold">desarrollo de software</span>. Desde el <span class="text-yellow-300 font-semibold">análisis</span> y 
+            <span class="text-purple-400 font-semibold">levantamiento de requerimientos</span>, hasta el 
+            <span class="text-pink-400 font-semibold">diseño, desarrollo, pruebas, implementación y mantenimiento</span>.
+          </p>
+        </div>
+    
+        <!-- Tarjeta 2 -->
+        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-yellow-400 mb-3">📚 Aprendizaje y Desarrollo</h3>
+          <p class="text-gray-300">
+            Cada <span class="text-green-400 font-semibold">proyecto</span> que implemento representa una 
+            <span class="text-blue-400 font-semibold">oportunidad de aprendizaje</span> que me motiva a profundizar en los 
+            <span class="text-red-400 font-semibold">objetivos del negocio</span> y a comprender mejor el 
+            <span class="text-yellow-300 font-semibold">pensamiento crítico</span> de los colaboradores en las distintas unidades.
+          </p>
+        </div>
