@@ -7,20 +7,70 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <div class="text-center flex justify-center items-center gap-40 my-10 p-8">
-    <div class="w-200 rounded-3xl text-left text-3xl bg-zinc-900 p-5">
-      <p class="text-white mb-4">
-        Como estudiante de Ingeniería en Sistemas, soy un entusiasta del
-        desarrollo e implementación de soluciones tecnológicas que permiten a
-        los negocios alcanzar el impacto que buscan.
-      </p>
-      <p class="text-gray-400 mb-4 ">
-        Me especializo en el desarrollo web full stack, trabajando con
-        tecnologías de vanguardia con facilidad de aprendizaje para adaptarme a
-        nuevas tecnologías.
-      </p>
-      
+  <div class="w-full h-full ">
+    <div class="flex justify-start items-start text-center gap-40 mt-10 p-8">
+      <div
+        class="w-150 rounded-3xl text-left text-lg bg-zinc-900 p-5 shadow-lg border border-gray-700"
+      >
+        <p class="text-white mb-4">
+          🚀 Como <span class="text-blue-400 font-semibold"
+            >estudiante de Ingeniería en Sistemas</span
+          >, soy un
+          <span class="text-green-400 font-semibold"
+            >apasionado del desarrollo</span
+          > y la
+          <span class="text-yellow-400 font-semibold"
+            >implementación de soluciones tecnológicas</span
+          >
+          que permiten a los negocios alcanzar el impacto que buscan.
+        </p>
+        <p class="text-gray-300 mb-4">
+          💻 Me especializo en el <span class="text-purple-400 font-semibold"
+            >desarrollo web full stack</span
+          >, trabajando con <span class="text-orange-400 font-semibold"
+            >tecnologías de vanguardia</span
+          >. Tengo una gran capacidad de aprendizaje 📚 para adaptarme a
+          <span class="text-pink-400 font-semibold">nuevas tecnologías</span> y desafíos.
+        </p>
+      </div>
+
+      <Image
+        src="/assets/elmer.jpg"
+        alt="Elmer"
+        width={200}
+        height={200}
+        class="rounded-full shadow-2xl border-4 border-blue-500 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
+      />
     </div>
-    <Image src="/assets/elmer.jpg" alt="Elmer" width={400} height={400} />
+    
+    <section class="p-10 ">
+      <h2 class="text-3xl font-bold text-white mb-6 text-left ml-2">Del Aprendizaje a la Implementación</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Tarjeta 1 -->
+        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-yellow-400 mb-3">🎓 Formación Académica</h3>
+          <p class="text-gray-300">
+            A lo largo de mi <span class="text-blue-400 font-semibold">formación académica</span>, he participado en 
+            <span class="text-green-400 font-semibold">proyectos</span> que abarcan todas las etapas del ciclo de vida del 
+            <span class="text-red-400 font-semibold">desarrollo de software</span>. Desde el <span class="text-yellow-300 font-semibold">análisis</span> y 
+            <span class="text-purple-400 font-semibold">levantamiento de requerimientos</span>, hasta el 
+            <span class="text-pink-400 font-semibold">diseño, desarrollo, pruebas, implementación y mantenimiento</span>.
+          </p>
+        </div>
+    
+        <!-- Tarjeta 2 -->
+        <div class="bg-zinc-900 p-6 rounded-3xl shadow-lg border border-gray-700">
+          <h3 class="text-xl font-bold text-yellow-400 mb-3">📚 Aprendizaje y Desarrollo</h3>
+          <p class="text-gray-300">
+            Cada <span class="text-green-400 font-semibold">proyecto</span> que implemento representa una 
+            <span class="text-blue-400 font-semibold">oportunidad de aprendizaje</span> que me motiva a profundizar en los 
+            <span class="text-red-400 font-semibold">objetivos del negocio</span> y a comprender mejor el 
+            <span class="text-yellow-300 font-semibold">pensamiento crítico</span> de los colaboradores en las distintas unidades.
+          </p>
+        </div>
+      </div>
+    </section>
+    
   </div>
 </Layout>

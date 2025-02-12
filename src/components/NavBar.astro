@@ -2,32 +2,29 @@
 import { Social } from "../content/data/db";
 ---
 
-<nav class="dark:bg-gray-800 flex justify-between border-b border-white">
-  <div class="flex flex-col items-start justify-center p-4 mx-2">
-    <h2 class="text-2xl">Elmer Noé Sosa</h2>
-    <p>Desarrollador Web Full Stack</p>
+<nav class="dark:bg-gray-800 flex justify-between items-center px-6 py-4 border-b border-gray-700 shadow-lg">
+  <!-- Nombre y título -->
+  <div class="flex flex-col">
+    <h2 class="text-3xl font-bold text-white">Elmer Noé Sosa</h2>
+    <p class="text-gray-400 text-lg">🚀 Desarrollador Web Full Stack</p>
   </div>
-  <div></div>
 
-  <ul class="flex justify-center items-center w-40 gap-8 p-4 mx-2">
-    {
-      Social.map((item, index) => (
-        <li>
-          <a href={item.href}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="50"
-              height="100"
-              viewBox="0 0 50 50"
-              style="fill:#FFFFFF;"
-            >
-              <path d={item.path} />
-            </svg>
-          </a>
-        </li>
-      ))
-    }
+  <!-- Redes sociales -->
+  <ul class="flex gap-6">
+    {Social.map((item, index) => (
+      <li class="transition-transform duration-300 hover:scale-110">
+        <a href={item.href} target="_blank" rel="noopener noreferrer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 50 50"
+            class="fill-current text-white hover:text-blue-400"
+          >
+            <path d={item.path} />
+          </svg>
+        </a>
+      </li>
+    ))}
   </ul>
 </nav>

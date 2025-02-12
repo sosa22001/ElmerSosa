@@ -14,13 +14,11 @@ import Sidebar from '../components/Sidebar.astro';
 		<title>Elmer Sosa</title>
 	</head>
 	<body class="dark:bg-gray-900 text-white">
-		<div >
+		<div class="">
 			<NavBar />
-			<div class="flex gap-x-6 h-screen">
+			<div class="flex h-screen ">
 				<Sidebar/>
-				<div class="ml-20 flex-grow">
-					<slot />
-				</div>	
+				<slot />
 			</div>
 			
 			
