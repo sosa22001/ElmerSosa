@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Project from "../components/Project.astro"
+import { proyectos } from '../content/data/db.ts'
+---
+
+<Layout>
+    <section class="flex flex-col w-xl md:ml-16 md:mt-16 gap-y-4">
+        {
+            proyectos.map(proyecto=>(
+                <Project
+                    title={proyecto.title}
+                    urlImagen={proyecto.urlImagen}
+                    description={proyecto.description}
+                    href={proyecto.href}
+                />
+            ))
+        }
+    </section>
+</Layout>

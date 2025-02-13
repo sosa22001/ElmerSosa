@@ -1,0 +1,21 @@
+---
+import type { Proyecto } from "../interfaces/Interface"; 
+const {title, urlImagen, description, href} = Astro.props as Proyecto
+---
+
+<div class="w-full flex flex-col md:flex-row items-center bg-zinc-900 text-white p-6 rounded-xl shadow-lg border border-gray-700">
+    <!-- Imagen -->
+    <img src=`/assets${urlImagen}` alt="Programación" 
+        class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+    
+    <!-- Contenido -->
+    <div class="md:ml-6 mt-4 md:mt-0 text-center md:text-left">
+        <h2 class="text-xl font-bold text-yellow-500">{title}</h2>
+        <p class="text-gray-300 mt-2 text-xs" set:html={description}>
+            
+        </p>
+        <a href={href} class="inline-block text-lg py-2  text-yellow-200 hover:text-yellow-300 font-semibold rounded-lg transition">
+            Saber más >
+        </a>
+    </div>
+</div>

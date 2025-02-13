@@ -12,9 +12,17 @@ export interface MainCardsProps {
 export interface Tecnologia {
     icon:string,
     nombre:string,
-    porcentaje:string
+    porcentaje:string,
+    color:string
 }
 
 export interface Tecnologias {
     [categoria:string] : Tecnologia[]
+}
+
+export interface Proyecto{
+    title:string,
+    urlImagen:string,
+    description:string, 
+    href:string
 }

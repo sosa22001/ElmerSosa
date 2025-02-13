@@ -1,5 +1,6 @@
 import type {
   MainCardsProps,
+  Proyecto,
   SocialMediaProps,
   Tecnologias,
 } from "../../interfaces/Interface.ts";
@@ -50,84 +51,163 @@ export const tecnologias:Tecnologias = {
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
             nombre: "Vue.js",
-            porcentaje: "40%"
+            porcentaje: "40%",
+            color: "green-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
             nombre: "JavaScript",
-            porcentaje: "50%"
+            porcentaje: "50%",
+            color: "yellow-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
             nombre: "CSS",
-            porcentaje: "45%"
+            porcentaje: "45%",
+            color:"blue-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             nombre: "Bootstrap",
-            porcentaje: "45%"
+            porcentaje: "45%",
+            color:"purple-400"
         }
     ],
     Backend: [
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
             nombre: "Nodejs y Express",
-            porcentaje: "70%"
+            porcentaje: "70%",
+            color: "green-600"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
             nombre: "Typescript",
-            porcentaje: "50%"
+            porcentaje: "50%",
+            color: "blue-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
             nombre: "SpringBoot",
-            porcentaje: "50%"
+            porcentaje: "50%",
+            color:"green-300"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
             nombre: "Laravel",
-            porcentaje: "50%"
+            porcentaje: "50%",
+            color:"red-400"
         }
     ],
     "Base de datos": [
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
             nombre: "MySql",
-            porcentaje: "55%"
+            porcentaje: "55%",
+            color:"blue-400"
         },
         {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
             nombre: "SQL Server",
-            porcentaje: "50%"
+            porcentaje: "50%",
+            color:"red-600"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
             nombre: "Oracle",
-            porcentaje: "60%"
+            porcentaje: "60%",
+            color:"red-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
             nombre: "MongoDB",
-            porcentaje: "45%"
+            porcentaje: "45%",
+            color:"green-400"
         },
         {
             icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
             nombre: "Supabase",
-            porcentaje: "45%"
+            porcentaje: "45%",
+            color:"green-300"
         }
     ],
     Otros: [
         {
             icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
             nombre:"Photoshop",
-            porcentaje: "60%"
+            porcentaje: "60%",
+            color:""
         },
         {
-            icon:"",
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg",
             nombre : "Illustrator",
-            porcentaje: "60%"
+            porcentaje: "60%",
+            color:""
         },
+        {
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", 
+            nombre: "Figma",
+            porcentaje: "50%",
+            color:""
+        }
         
     ]
 }
+
+export const habilidadesBlandas:MainCardsProps[] = [
+    {
+        title:"🎤 Oratoria",
+        description: "Experiencia en moderación de eventos tecnológicos."
+    },
+    {
+        title: "⚡ Scrum",
+        description:"Aplicación de metodologías ágiles en desarrollo."
+    },
+    {
+        title:"🚀 Liderazgo",
+        description:"Coordinación de equipos en proyectos de software."
+    }
+]
+
+export const proyectos: Proyecto[] = [
+    {
+        title: "🌍 WebApp Congreso UNAH",
+        urlImagen: "/Congreso/Landing page.png",
+        description: `Plataforma web para la <span class="text-blue-400 font-semibold">gestión del Congreso de Innovación 2025</span>, 
+            con <span class="text-green-400 font-semibold">registro de usuarios</span>, 
+            <span class="text-yellow-400 font-semibold">validación de asistencia mediante QR</span> y 
+            <span class="text-purple-400 font-semibold">administración de eventos en tiempo real</span>.`,
+        href: "/congreso"
+    },
+    {
+        title: "🎬 Clon de Netflix",
+        urlImagen: "/Netflix/Login.jpeg",
+        description: `Aplicación inspirada en <span class="text-red-400 font-semibold">Netflix</span> con 
+            <span class="text-blue-400 font-semibold">exploración de contenido</span>, 
+            <span class="text-green-400 font-semibold">perfiles de usuario</span>, 
+            <span class="text-yellow-400 font-semibold">favoritos</span> y 
+            <span class="text-purple-400 font-semibold">autenticación segura</span>.`,
+        href: "/netflix"
+    },
+    {
+        title: "🛒 Mercadito NUBIRA",
+        urlImagen: "/Nubira/Landing page.png",
+        description: `Sistema web para <span class="text-blue-400 font-semibold">comerciantes</span>, permitiendo 
+            <span class="text-green-400 font-semibold">gestión de inventarios</span>, 
+            <span class="text-yellow-400 font-semibold">ventas</span>, 
+            <span class="text-purple-400 font-semibold">facturación</span> y 
+            <span class="text-red-400 font-semibold">reportes de negocio</span>.`,
+        href: "/nubira"
+    },
+    {
+        title: "🏫 Sistema de la UNAH",
+        urlImagen: "/Sistema UNAH/Bienvenido.png",
+        description: `Plataforma académica para la <span class="text-blue-400 font-semibold">gestión de estudiantes</span>, 
+            <span class="text-green-400 font-semibold">proceso de matrícula</span>, 
+            <span class="text-yellow-400 font-semibold">docentes</span> y 
+            <span class="text-purple-400 font-semibold">administración universitaria</span> con 
+            <span class="text-red-400 font-semibold">roles y seguridad</span>.`,
+        href: "/sistemaUNAH"
+    }
+];
+

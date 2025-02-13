@@ -1,0 +1,23 @@
+---
+import type { Tecnologias } from "../interfaces/Interface"
+
+const { title, tecnologias } = Astro.props;
+import Skill from "./Skill.astro";
+
+---
+
+<section class="p-14">
+    <h2 class="text-xl text-left font-bold text-white mb-4 ml-2">{title}</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {
+            tecnologias.map((tecnologia:any)=>(
+                <Skill  
+                icon={tecnologia.icon}
+                nombre={tecnologia.nombre}
+                porcentaje={tecnologia.porcentaje}
+                color={tecnologia.color}
+                />
+            ))
+        }
+    </div>
+</section>
