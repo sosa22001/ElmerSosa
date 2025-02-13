@@ -116,5 +116,18 @@ export const tecnologias:Tecnologias = {
             nombre: "Supabase",
             porcentaje: "45%"
         }
+    ],
+    Otros: [
+        {
+            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+            nombre:"Photoshop",
+            porcentaje: "60%"
+        },
+        {
+            icon:"",
+            nombre : "Illustrator",
+            porcentaje: "60%"
+        },
+        
     ]
 }
