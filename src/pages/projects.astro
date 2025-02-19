@@ -1,7 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Project from "../components/Project.astro"
-import { proyectos } from '../content/data/db.ts'
+//import { proyectos } from '../content/data/db.ts'
+
+//Importamos getCollection para traer los proyectos que hicimos con markdown.
+import { getCollection, type CollectionEntry } from "astro:content";
+
+//Definimos el tipo de datps que representan los proyectos
+type Project = CollectionEntry<'projects'> & { slug: string }; 
+
+//Obtengamos los proyectos.
+const proyectos:Project[] = await getCollection('projects') as Project[];
+
 ---
 
 <Layout>
@@ -9,10 +19,10 @@ import { proyectos } from '../content/data/db.ts'
         {
             proyectos.map(proyecto=>(
                 <Project
-                    title={proyecto.title}
-                    urlImagen={proyecto.urlImagen}
-                    description={proyecto.description}
-                    href={proyecto.href}
+                    title={proyecto.data.title}
+                    urlImagen={proyecto.data.imagen} 
+                    description={proyecto.data.description}
+                    href={`/projects/${proyecto.slug}`}
                 />
             ))
         }
