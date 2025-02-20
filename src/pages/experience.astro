@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ExperienceComponent from "../components/ExperienceComponent.astro";
+import { experiences } from '../content/data/db.ts';
+
+---
+
+<Layout>
+    <div class="m-10 my-10">
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+            {
+                experiences.map(exp=>(
+                    <ExperienceComponent
+                        title={exp.titulo}
+                        date={exp.date}
+                        description={exp.description}
+                    />
+                ))
+            }
+        </ol>
+    </div>
+</Layout>

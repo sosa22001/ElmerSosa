@@ -26,3 +26,9 @@ export interface Proyecto{
     description:string, 
     href:string
 }
+
+export interface Experience{
+    titulo:string,
+    date:string,
+    description:string[],
+}

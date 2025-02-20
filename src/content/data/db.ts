@@ -1,4 +1,5 @@
 import type {
+  Experience,
   MainCardsProps,
   Proyecto,
   SocialMediaProps,
@@ -19,7 +20,7 @@ export const Social: SocialMediaProps[] = [
 ];
 
 export const cards: MainCardsProps[] = [
-    {
+  {
     description: `🚀 Como <span class="text-blue-400 font-semibold">estudiante de Ingeniería en Sistemas</span>, soy un
             <span class="text-green-400 font-semibold">apasionado del desarrollo</span> y la
             <span class="text-yellow-400 font-semibold">implementación de soluciones tecnológicas</span>
@@ -28,186 +29,211 @@ export const cards: MainCardsProps[] = [
             >, trabajando con <span class="text-orange-400 font-semibold">tecnologías de vanguardia</span
             >. Tengo una gran capacidad de aprendizaje 📚 para adaptarme a
             <span class="text-pink-400 font-semibold">nuevas tecnologías</span> y desafíos.`,
-    },
-    {
+  },
+  {
     title: "🎓 Formación Académica",
     description: `A lo largo de mi <span class="text-blue-400 font-semibold">formación académica</span>, he participado en 
             <span class="text-green-400 font-semibold">proyectos</span> que abarcan todas las etapas del ciclo de vida del 
             <span class="text-red-400 font-semibold">desarrollo de software</span>. Desde el <span class="text-yellow-300 font-semibold">análisis</span> y 
             <span class="text-purple-400 font-semibold">levantamiento de requerimientos</span>, hasta el 
-            <span class="text-pink-400 font-semibold">diseño, desarrollo, pruebas, implementación y mantenimiento</span>.`
-    },
-    {
-        title: "📚 Aprendizaje y Desarrollo",
-        description: `Cada <span class="text-green-400 font-semibold">proyecto</span> que implemento representa una 
+            <span class="text-pink-400 font-semibold">diseño, desarrollo, pruebas, implementación y mantenimiento</span>.`,
+  },
+  {
+    title: "📚 Aprendizaje y Desarrollo",
+    description: `Cada <span class="text-green-400 font-semibold">proyecto</span> que implemento representa una 
             <span class="text-blue-400 font-semibold">oportunidad de aprendizaje</span> que me motiva a profundizar en los 
             <span class="text-red-400 font-semibold">objetivos del negocio</span> y a comprender mejor el 
-            <span class="text-yellow-300 font-semibold">pensamiento crítico</span> de los colaboradores en las distintas unidades.`
-    }
+            <span class="text-yellow-300 font-semibold">pensamiento crítico</span> de los colaboradores en las distintas unidades.`,
+  },
 ];
 
-export const tecnologias:Tecnologias = {
-    'Frontend': [
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-            nombre: "Vue.js",
-            porcentaje: "40%",
-            color: "green-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            nombre: "JavaScript",
-            porcentaje: "50%",
-            color: "yellow-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            nombre: "CSS",
-            porcentaje: "45%",
-            color:"blue-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            nombre: "Bootstrap",
-            porcentaje: "45%",
-            color:"purple-400"
-        }
-    ],
-    Backend: [
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            nombre: "Nodejs y Express",
-            porcentaje: "70%",
-            color: "green-600"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            nombre: "Typescript",
-            porcentaje: "50%",
-            color: "blue-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-            nombre: "SpringBoot",
-            porcentaje: "50%",
-            color:"green-300"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-            nombre: "Laravel",
-            porcentaje: "50%",
-            color:"red-400"
-        }
-    ],
-    "Base de datos": [
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-            nombre: "MySql",
-            porcentaje: "55%",
-            color:"blue-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
-            nombre: "SQL Server",
-            porcentaje: "50%",
-            color:"red-600"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
-            nombre: "Oracle",
-            porcentaje: "60%",
-            color:"red-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            nombre: "MongoDB",
-            porcentaje: "45%",
-            color:"green-400"
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
-            nombre: "Supabase",
-            porcentaje: "45%",
-            color:"green-300"
-        }
-    ],
-    Otros: [
-        {
-            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
-            nombre:"Photoshop",
-            porcentaje: "60%",
-            color:""
-        },
-        {
-            icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg",
-            nombre : "Illustrator",
-            porcentaje: "60%",
-            color:""
-        },
-        {
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", 
-            nombre: "Figma",
-            porcentaje: "50%",
-            color:""
-        }
-        
-    ]
-}
+export const tecnologias: Tecnologias = {
+  Frontend: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      nombre: "Vue.js",
+      porcentaje: "40%",
+      color: "green-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      nombre: "JavaScript",
+      porcentaje: "50%",
+      color: "yellow-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      nombre: "CSS",
+      porcentaje: "45%",
+      color: "blue-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      nombre: "Bootstrap",
+      porcentaje: "45%",
+      color: "purple-400",
+    },
+  ],
+  Backend: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      nombre: "Nodejs y Express",
+      porcentaje: "70%",
+      color: "green-600",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      nombre: "Typescript",
+      porcentaje: "50%",
+      color: "blue-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+      nombre: "SpringBoot",
+      porcentaje: "50%",
+      color: "green-300",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+      nombre: "Laravel",
+      porcentaje: "50%",
+      color: "red-400",
+    },
+  ],
+  "Base de datos": [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      nombre: "MySql",
+      porcentaje: "55%",
+      color: "blue-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+      nombre: "SQL Server",
+      porcentaje: "50%",
+      color: "red-600",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+      nombre: "Oracle",
+      porcentaje: "60%",
+      color: "red-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      nombre: "MongoDB",
+      porcentaje: "45%",
+      color: "green-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      nombre: "Supabase",
+      porcentaje: "45%",
+      color: "green-300",
+    },
+  ],
+  Otros: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg",
+      nombre: "Photoshop",
+      porcentaje: "60%",
+      color: "",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg",
+      nombre: "Illustrator",
+      porcentaje: "60%",
+      color: "",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+      nombre: "Figma",
+      porcentaje: "50%",
+      color: "",
+    },
+  ],
+};
 
-export const habilidadesBlandas:MainCardsProps[] = [
-    {
-        title:"🎤 Oratoria",
-        description: "Experiencia en moderación de eventos tecnológicos."
-    },
-    {
-        title: "⚡ Scrum",
-        description:"Aplicación de metodologías ágiles en desarrollo."
-    },
-    {
-        title:"🚀 Liderazgo",
-        description:"Coordinación de equipos en proyectos de software."
-    }
-]
+export const habilidadesBlandas: MainCardsProps[] = [
+  {
+    title: "🎤 Oratoria",
+    description: "Experiencia en moderación de eventos tecnológicos.",
+  },
+  {
+    title: "⚡ Scrum",
+    description: "Aplicación de metodologías ágiles en desarrollo.",
+  },
+  {
+    title: "🚀 Liderazgo",
+    description: "Coordinación de equipos en proyectos de software.",
+  },
+];
 
 export const proyectos: Proyecto[] = [
-    {
-        title: "🌍 WebApp Congreso UNAH",
-        urlImagen: "/Congreso/Landing page.png",
-        description: `Plataforma web para la <span class="text-blue-400 font-semibold">gestión del Congreso de Innovación 2025</span>, 
+  {
+    title: "🌍 WebApp Congreso UNAH",
+    urlImagen: "/Congreso/Landing page.png",
+    description: `Plataforma web para la <span class="text-blue-400 font-semibold">gestión del Congreso de Innovación 2025</span>, 
             con <span class="text-green-400 font-semibold">registro de usuarios</span>, 
             <span class="text-yellow-400 font-semibold">validación de asistencia mediante QR</span> y 
             <span class="text-purple-400 font-semibold">administración de eventos en tiempo real</span>.`,
-        href: "/congreso"
-    },
-    {
-        title: "🎬 Clon de Netflix",
-        urlImagen: "/Netflix/Login.jpeg",
-        description: `Aplicación inspirada en <span class="text-red-400 font-semibold">Netflix</span> con 
+    href: "/congreso",
+  },
+  {
+    title: "🎬 Clon de Netflix",
+    urlImagen: "/Netflix/Login.jpeg",
+    description: `Aplicación inspirada en <span class="text-red-400 font-semibold">Netflix</span> con 
             <span class="text-blue-400 font-semibold">exploración de contenido</span>, 
             <span class="text-green-400 font-semibold">perfiles de usuario</span>, 
             <span class="text-yellow-400 font-semibold">favoritos</span> y 
             <span class="text-purple-400 font-semibold">autenticación segura</span>.`,
-        href: "/netflix"
-    },
-    {
-        title: "🛒 Mercadito NUBIRA",
-        urlImagen: "/Nubira/Landing page.png",
-        description: `Sistema web para <span class="text-blue-400 font-semibold">comerciantes</span>, permitiendo 
+    href: "/netflix",
+  },
+  {
+    title: "🛒 Mercadito NUBIRA",
+    urlImagen: "/Nubira/Landing page.png",
+    description: `Sistema web para <span class="text-blue-400 font-semibold">comerciantes</span>, permitiendo 
             <span class="text-green-400 font-semibold">gestión de inventarios</span>, 
             <span class="text-yellow-400 font-semibold">ventas</span>, 
             <span class="text-purple-400 font-semibold">facturación</span> y 
             <span class="text-red-400 font-semibold">reportes de negocio</span>.`,
-        href: "/nubira"
-    },
-    {
-        title: "🏫 Sistema de la UNAH",
-        urlImagen: "/Sistema UNAH/Bienvenido.png",
-        description: `Plataforma académica para la <span class="text-blue-400 font-semibold">gestión de estudiantes</span>, 
+    href: "/nubira",
+  },
+  {
+    title: "🏫 Sistema de la UNAH",
+    urlImagen: "/Sistema UNAH/Bienvenido.png",
+    description: `Plataforma académica para la <span class="text-blue-400 font-semibold">gestión de estudiantes</span>, 
             <span class="text-green-400 font-semibold">proceso de matrícula</span>, 
             <span class="text-yellow-400 font-semibold">docentes</span> y 
             <span class="text-purple-400 font-semibold">administración universitaria</span> con 
             <span class="text-red-400 font-semibold">roles y seguridad</span>.`,
-        href: "/sistemaUNAH"
-    }
+    href: "/sistemaUNAH",
+  },
 ];
 
+export const experiences: Experience[] = [
+  {
+    titulo: "Instructor Ingeniería En Sistemas | UNAH",
+    date: "Septiembre 2023 - Diciembre 2024",
+    description: [
+      "Impartición de laboratorios en asignaturas como Sistemas Operativos I, Introducción a Ingenieríaen Sistemas, y cursos de SQL Server, Java e Inteligencia Artificial (IA)",
+      "Mantenimiento y supervisión del estado de equipos en cuatro laboratorios.",
+    ],
+  },
+  {
+    titulo: "Consultor Jr | Erigo Ingeniería",
+    date: "Junio 2024 (1 mes)",
+    description: [
+      "Evaluación de los procesos internos de la empresa para sugerir un sistema de información",
+    ],
+  },
+  {
+    titulo: " Diseñador y Fotográfo | Foto Estudio Liliam",
+    date: "Octubre 2019 - Febrero 2020",
+    description: [
+      "Diseño de cuadros personalizados para colegios y otras instituciones.",
+      "Edición y retoque de imágenes para asegurar la calidad y satisfacción del cliente.",
+      "Diseño y creación de material personalizado, incluyendo mockups como sobres para la entrega de fotografías.",
+    ],
+  },
+];
