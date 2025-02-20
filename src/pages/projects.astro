@@ -15,7 +15,7 @@ const proyectos:Project[] = await getCollection('projects') as Project[];
 ---
 
 <Layout>
-    <section class="flex flex-col w-xl md:ml-16 md:mt-16 gap-y-4">
+    <section class="flex flex-col w-xl md:mx-auto md:mt-16 gap-y-4">
         {
             proyectos.map(proyecto=>(
                 <Project

@@ -23,7 +23,7 @@ import SectionSkills from "../components/SectionSkills.astro";
   </div>
   
     
-    <section class="p-10 ">
+    <section class="p-10">
       <h2 class="text-xl font-bold text-white mb-6 text-left ml-2">Del Aprendizaje a la Implementación</h2>
       
       <div class="grid md:grid-cols-2 gap-6">
@@ -39,8 +39,7 @@ import SectionSkills from "../components/SectionSkills.astro";
     </section>
 
     <section class="p-14">
-      <h2 class="text-4xl font-bold text-white text-center ml-2 mb-8">Hábilidades </h2>
-      <h2 class="text-xl font-bold text-white text-left ml-2 mb-4">Destacado en: </h2>
+      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">Hábilidades </h2>
       <div class="grid md:grid-cols-3 gap-6">
         {
           habilidadesBlandas.map(habilidad=>(
@@ -53,10 +52,21 @@ import SectionSkills from "../components/SectionSkills.astro";
       </div>
     </section>
 
-    {
-      Object.entries(tecnologias).map( ([tecnologia, tecnologias]) =>(
-        <SectionSkills title={tecnologia} , tecnologias={tecnologias}/>
-      ))
-    }
+    <div class="p-14">
+      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">Tecnologías </h2>
+      <p class="text-lg text-left text-gray-300 mb-6  ml-2">
+        A lo largo de mi trayectoria, he trabajado en <span class="text-blue-400 font-semibold">proyectos muy diversos</span>, lo que me ha llevado a desarrollar una gran 
+        <span class="text-green-400 font-semibold">capacidad de aprendizaje autónomo</span>.  
+        Me apasiona explorar <span class="text-yellow-400 font-semibold">nuevas tecnologías</span> y herramientas que permitan construir  
+        <span class="text-purple-400 font-semibold">soluciones completas</span>, desde la idea hasta su implementación.  
+      </p>
+          
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
+        {Object.entries(tecnologias).map(([tecnologia, tecnologias]) => (
+          <SectionSkills title={tecnologia} tecnologias={tecnologias} class="w-full" />
+        ))}
+      </div>
+    </div>
+    
     
 </Layout>
