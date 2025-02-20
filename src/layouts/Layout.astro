@@ -13,15 +13,13 @@ import Sidebar from '../components/Sidebar.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Elmer Sosa</title>
 	</head>
-	<body class="dark:bg-gray-900 text-white">
-		<div class="">
+	<body class="dark:bg-gray-900 text-white w-full">
+		<div class="relative">
+			<Sidebar/>
 			<NavBar />
-			<div class="flex h-screen gap-2">
-				<Sidebar/>
+			<div class="flex h-screen gap-2 md:ml-64 transition-all duration-300">
 				<slot />
 			</div>
-			
-			
 		</div>
 	</body>
 </html>

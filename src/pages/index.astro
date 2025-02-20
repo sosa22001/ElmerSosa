@@ -11,16 +11,17 @@ import SectionSkills from "../components/SectionSkills.astro";
 
 <Layout>
   <div class="w-full h-full ">
-    <div class="flex flex-row items-start text-center gap-20 mt-10 p-8">
-      <Cards title={cards[0].title}, description = {cards[0].description} class="w-150"/>
+    <div class="flex flex-col md:flex-row items-center md:items-start text-center gap-10 md:gap-20 mt-10 p-6">
+      <Cards title={cards[0].title} description={cards[0].description} class="w-full md:w-96" />
       <Image
-        src="/assets/elmer.jpg"
-        alt="Elmer"
-        width={200}
-        height={200}
-        class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
+          src="/assets/elmer.jpg"
+          alt="Elmer"
+          width={200}
+          height={200}
+          class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
       />
-    </div>
+  </div>
+  
     
     <section class="p-10 ">
       <h2 class="text-xl font-bold text-white mb-6 text-left ml-2">Del Aprendizaje a la Implementación</h2>
