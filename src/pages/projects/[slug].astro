@@ -42,20 +42,19 @@ const { Content, Headings } = await entry.render();
     </div>
 
     <!-- Imágenes del proyecto -->
-    <h2 class="text-2xl font-semibold text-gray-700 mt-10 mb-4">Galería</h2>
+    <h2 class="text-2xl font-semibold text-gray-700 mt-10 ">Galería</h2>
     <div class="grid grid-cols-2 gap-4">
       {
         entry.data.imagenes.map((imagen: any) => (
           <img
             src={imagen}
             alt={entry.data.title}
-            class="w-full h-40 object-cover rounded-lg shadow-md"
+            class="w-full h-50 object-cover rounded-lg shadow-md"
           />
         ))
       }
     </div>
 
-    <!-- Verifica si existen repos y los renderiza -->
     
   </div>
 </Layout>
