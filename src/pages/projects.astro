@@ -6,7 +6,7 @@ import Project from "../components/Project.astro"
 //Importamos getCollection para traer los proyectos que hicimos con markdown.
 import { getCollection, type CollectionEntry } from "astro:content";
 
-//Definimos el tipo de datps que representan los proyectos
+//Definimos el tipo de datos que representan los proyectos
 type Project = CollectionEntry<'projects'> & { slug: string }; 
 
 //Obtengamos los proyectos.

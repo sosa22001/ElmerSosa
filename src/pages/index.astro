@@ -4,49 +4,78 @@ import { Image } from "astro:assets";
 
 import Cards from "../components/Cards.astro";
 
-import { cards, tecnologias, habilidadesBlandas } from '../content/data/db.ts';
+import { cards, tecnologias, habilidadesBlandas } from "../content/data/db.ts";
 import SectionSkills from "../components/SectionSkills.astro";
-
 ---
 
 <Layout>
-  <div class="w-full h-full ">
-    <div class="flex flex-col md:flex-row items-center md:items-start text-center gap-10 md:gap-20 mt-10 p-6">
-      <Cards title={cards[0].title} description={cards[0].description} class="w-full md:w-96" />
-      <Image
-          src="/assets/elmer.jpg"
-          alt="Elmer"
-          width={200}
-          height={200}
-          class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
+  <div class="w-full h-full">
+    <div
+      class="flex flex-col md:flex-row items-center md:items-start text-center gap-10 md:gap-20 mt-10 p-6"
+    >
+      <Cards
+        title={cards[0].title}
+        description={cards[0].description}
+        class="w-full md:w-96"
       />
-  </div>
-  
-  <a href="/CV - Elmer Noé Sosa.pdf" download="CV - Elmer Noé Sosa.pdf"  class="ml-10 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:ml-10 md:inline-flex md:items-center md:px-4 md:py-2 md:text-sm md:font-medium md:text-gray-900 md:bg-white md:border md:border-gray-200 md:rounded-lg md:hover:bg-gray-100 md:hover:text-blue-700 md:focus:z-10 md:focus:ring-4 md:focus:outline-none md:focus:ring-gray-100 md:focus:text-blue-700 dark:md:bg-gray-800 dark:md:text-gray-400 dark:md:border-gray-600 dark:md:hover:text-white dark:md:hover:bg-gray-700 dark:md:focus:ring-gray-700 mx-auto"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
-    <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-  </svg> Descargar CV</a>
+      <Image
+        src="/assets/elmer.jpg"
+        alt="Elmer"
+        width={200}
+        height={200}
+        class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
+      />
+    </div>
+
+    <a
+      href="/CV - Elmer Noé Sosa.pdf"
+      download="CV - Elmer Noé Sosa.pdf"
+      class="ml-10 inline-flex items-center px-4 py-2 text-sm font-medium
+         text-gray-900 bg-white border border-gray-200 rounded-lg
+         hover:bg-gray-100 hover:text-blue-700 focus:ring-4 focus:ring-gray-100
+         dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600
+         dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+      aria-label="Descargar CV de Elmer Noé Sosa"
+    >
+      <!-- Ícono de Descarga -->
+      <svg
+        class="w-4 h-4 mr-2"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"
+        ></path>
+        <path
+          d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+        ></path>
+      </svg>
+      Descargar CV
+    </a>
 
     <section class="p-10">
-      <h2 class="text-xl font-bold text-white mb-6 text-left ml-2">Del Aprendizaje a la Implementación</h2>
-      
+      <h2 class="text-xl font-bold text-white mb-6 text-left ml-2">
+        Del Aprendizaje a la Implementación
+      </h2>
+
       <div class="grid md:grid-cols-2 gap-6">
         {
-          cards.slice(1).map((card)=>(
-            <Cards
-              title={card.title}
-              description ={card.description}
-            />
+          cards
+            .slice(1)
+            .map((card) => (
+              <Cards title={card.title} description={card.description} />
             ))
         }
       </div>
     </section>
 
-    <section class="p-14">
-      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">Hábilidades </h2>
+    <section class="p-10">
+      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">
+        Hábilidades
+      </h2>
       <div class="grid md:grid-cols-3 gap-6">
         {
-          habilidadesBlandas.map(habilidad=>(
+          habilidadesBlandas.map((habilidad) => (
             <Cards
               title={habilidad.title}
               description={habilidad.description}
@@ -56,21 +85,36 @@ import SectionSkills from "../components/SectionSkills.astro";
       </div>
     </section>
 
-    <div class="p-14">
-      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">Tecnologías </h2>
-      <p class="text-lg text-left text-gray-300 mb-6  ml-2">
-        A lo largo de mi trayectoria, he trabajado en <span class="text-blue-400 font-semibold">proyectos muy diversos</span>, lo que me ha llevado a desarrollar una gran 
-        <span class="text-green-400 font-semibold">capacidad de aprendizaje autónomo</span>.  
-        Me apasiona explorar <span class="text-yellow-400 font-semibold">nuevas tecnologías</span> y herramientas que permitan construir  
-        <span class="text-purple-400 font-semibold">soluciones completas</span>, desde la idea hasta su implementación.  
+    <div class="p-10">
+      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">
+        Tecnologías
+      </h2>
+      <p class="text-lg text-left text-gray-300 mb-6 ml-2">
+        A lo largo de mi trayectoria, he trabajado en <span
+          class="text-blue-400 font-semibold">proyectos muy diversos</span
+        >, lo que me ha llevado a desarrollar una gran
+        <span class="text-green-400 font-semibold"
+          >capacidad de aprendizaje autónomo</span
+        >. Me apasiona explorar <span class="text-yellow-400 font-semibold"
+          >nuevas tecnologías</span
+        > y herramientas que permitan construir
+        <span class="text-purple-400 font-semibold">soluciones completas</span>,
+        desde la idea hasta su implementación.
       </p>
-          
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
-        {Object.entries(tecnologias).map(([tecnologia, tecnologias]) => (
-          <SectionSkills title={tecnologia} tecnologias={tecnologias} class="w-full" />
-        ))}
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto"
+      >
+        {
+          Object.entries(tecnologias).map(([tecnologia, tecnologias]) => (
+            <SectionSkills
+              title={tecnologia}
+              tecnologias={tecnologias}
+              class="w-full"
+            />
+          ))
+        }
       </div>
     </div>
-    
-    
+  </div>
 </Layout>

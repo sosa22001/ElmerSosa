@@ -10,7 +10,7 @@ export const getStaticPaths = async () => {
   const projectEntries: project[] = await getCollection("projects");
 
   return projectEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.slug }, 
     props: { entry },
   }));
 };

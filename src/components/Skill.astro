@@ -3,11 +3,22 @@ import type { Tecnologia } from "../interfaces/Interface";
 
 const { icon, nombre, porcentaje: porcentajeStr, color } = Astro.props as Tecnologia;
 const porcentaje = parseInt(porcentajeStr.replace('%', ''), 10);
-
-const colorFormado = `bg-${color}`
 ---
 
-<div class="p-4 text-center">
-    <img src={icon} alt={nombre} class="w-12 mx-auto" />
-    <h5 class={`text-base font-bold mt-2 text-${color}`}>{nombre}</h5>
+<div class="p-4 text-center h-auto w-24 flex flex-col justify-around">
+    <div class="">
+        <img src={icon} alt={nombre} class="w-10 mx-auto " />
+        <p class={`text-xs mt-1 text-${color} `}>{nombre}</p>
+    </div>
+
+    <div class="">
+        <div class="w-14 bg-gray-200 rounded-full h-2 mt-2">
+            <div 
+                class=`h-2 rounded-full transition-all bg-green-600`
+                style={`width: ${porcentaje}%;`}>
+            </div>
+        </div>
+    
+        <p class="text-sm text-gray-600 mt-1">{porcentaje}%</p>
+    </div>
 </div>

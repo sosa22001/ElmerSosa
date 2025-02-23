@@ -12,8 +12,6 @@ ul { @apply mb-4; }
 ol { @apply mb-4; }
 li { @apply mb-2; }
 strong { @apply text-white; }
-code { @apply bg-orange-100 text-orange-800 px-1 py-0.5 rounded; }
+code { @apply bg-orange-100  px-1 py-0.5 rounded; }
 pre { @apply bg-gray-100 p-4 rounded-lg overflow-x-auto; }
-pre code { @apply bg-transparent text-gray-800; }
-blockquote { @apply border-l-4 border-orange-500 pl-4 italic text-gray-700; }
-
+pre code { @apply bg-transparent ; }

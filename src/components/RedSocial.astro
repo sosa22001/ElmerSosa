@@ -1,0 +1,17 @@
+---
+import type { SocialMediaProps } from "../interfaces/Interface";
+
+const {name, href, path} = Astro.props as SocialMediaProps;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer">
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 50 50"
+      class="fill-current text-white hover:text-blue-400"
+    >
+      <path d={path} />
+    </svg>
+  </a>
+</li>
