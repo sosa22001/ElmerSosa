@@ -26,7 +26,7 @@ export const cards: MainCardsProps[] = [
             <span class="text-yellow-400 font-semibold">implementación de soluciones tecnológicas</span>
             que permiten a los negocios alcanzar el impacto que buscan. <br>
             💻 Me especializo en el <span class="text-purple-400 font-semibold">desarrollo web full stack</span
-            >, trabajando con <span class="text-orange-400 font-semibold">tecnologías de vanguardia</span
+            >, trabajando con tecnologías de vanguardia
             >. Tengo una gran capacidad de aprendizaje 📚 para adaptarme a
             <span class="text-pink-400 font-semibold">nuevas tecnologías</span> y desafíos.`,
   },
