@@ -209,6 +209,17 @@ export const proyectos: Proyecto[] = [
             <span class="text-red-400 font-semibold">roles y seguridad</span>.`,
     href: "/sistemaUNAH",
   },
+  {
+    title: "☁️ Proyecto Terraform",
+    urlImagen: "/Proyecto Terraform/Landing page.png",
+    description: `Infraestructura en la nube para la <span class="text-blue-400 font-semibold">gestión del Congreso de Innovación 2025</span>, 
+            desplegada con <span class="text-green-400 font-semibold">Terraform en Azure</span>. 
+            Incluye <span class="text-yellow-400 font-semibold">sitio estático optimizado</span>, 
+            <span class="text-purple-400 font-semibold">aplicaciones web escalables</span>, 
+            <span class="text-red-400 font-semibold">procesamiento asíncrono con Azure Functions</span> 
+            y <span class="text-indigo-400 font-semibold">gestión eficiente de almacenamiento en Blob Storage</span>.`,
+    href: "/congreso",
+}
 ];
 
 export const experiences: Experience[] = [

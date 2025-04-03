@@ -1,0 +1,49 @@
+---
+title: "☁️ Proyecto Terraform - Despliegue de arquitectura en Azure"
+description: "Infraestructura en la nube para un e-commerce escalable y flexible, diseñada con Terraform y servicios de Azure."
+imagen: "/Proyecto Terraform/Diagrama arquitectura.jpg"
+href: "/ecommerce"
+
+imagenes:
+  - "/assets/Proyecto Terraform/Grupo de recursos-1.png"
+  - "/assets/Proyecto Terraform/Grupo de recursos-2.png"
+  - "/assets/Proyecto Terraform/Contenedor archivos.png"
+  - "/assets/Proyecto Terraform/Queue Storage.png"
+---
+
+## Descripción
+Este proyecto define y despliega la infraestructura de un **e-commerce escalable**, utilizando **Terraform y Azure**.
+
+### **Componentes clave:**
+- 🌐 **Sitio estático:** Implementado con **Azure Static Web Apps** para ofrecer una experiencia rápida y optimizada utilizando Astro.js.
+- 💻 **Aplicaciones web:** Separadas en **FrontOffice** (cliente) y **BackOffice** (administrador), cada una con su propia **UI y API** desplegada en **Linux Web Apps**.
+- 🗄 **Base de datos SQL Server:** Almacena información estructurada y garantiza transacciones consistentes.
+- 📂 **Almacenamiento de archivos:** Implementado con **Azure Blob Storage** para gestionar imágenes de productos, facturas electrónicas y documentos de clientes.
+- ⏳ **Procesamiento asíncrono:**
+  - **Azure Queue Storage** almacena tareas pendientes sin afectar el rendimiento de la API.
+  - **Azure Functions (Serverless)** procesa automáticamente los mensajes en la cola.
+- ⚡ **Caché con Azure Redis:** Mejora la velocidad de consultas frecuentes y reduce la carga sobre la base de datos.
+- 🐳 **Azure Container Registry (ACR):** Gestiona imágenes Docker de las aplicaciones para despliegues consistentes en producción.
+
+## Mi Rol  
+En este proyecto, fui responsable de definir la infraestructura utilizando **Terraform** y desplegar los recursos en **Azure**.
+
+## Responsabilidades  
+- **🔧 Diseño de arquitectura:** Definí los servicios necesarios para cumplir con los requisitos de escalabilidad y flexibilidad del e-commerce.
+- **📜 Infraestructura como Código:** Implementé **Terraform** para automatizar la provisión de recursos en Azure.
+- **📡 Configuración de servicios en Azure:** Desde Static Web Apps hasta Redis, asegurando integración y optimización.
+- **⚙️ Optimización de rendimiento:** Implementación de caché y procesamiento asíncrono para mejorar tiempos de respuesta.
+- **🐳 Contenerización y despliegue:** Uso de **Azure Container Registry** para manejar imágenes Docker y facilitar la entrega continua.
+
+## Desafíos  
+Durante el desarrollo del proyecto, enfrenté varios retos que requirieron investigación y pruebas:
+
+- 🏗 **Integración de Terraform con Azure:** Configuración de permisos y automatización del despliegue.
+- ⚡ **Procesamiento asíncrono con Azure Functions:** Adaptación de eventos de cola para mejorar la eficiencia.
+- 🔄 **Optimización del almacenamiento en Blob Storage:** Estrategias para organizar archivos y optimizar costos.
+
+## Tecnologías utilizadas  
+- 🟢 Terraform
+- ☁️ Azure (Web Apps, Static Web Apps, Blob Storage, Redis, Queue Storage, Functions, ACR)
+- 🐳 Docker
+

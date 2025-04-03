@@ -4,13 +4,13 @@ import { getCollection, type CollectionEntry } from "astro:content";
 
 type project = CollectionEntry<"projects"> & {
   render: () => Promise<{ Content: any; Headings: any[] }>;
-} & { slug: string };
+} & { slug: string }; // 
 
 export const getStaticPaths = async () => {
   const projectEntries: project[] = await getCollection("projects");
 
   return projectEntries.map((entry) => ({
-    params: { slug: entry.slug }, 
+    params: { slug: entry.slug },  //projects/netflix
     props: { entry },
   }));
 };
