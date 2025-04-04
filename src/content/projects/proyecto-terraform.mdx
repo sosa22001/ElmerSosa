@@ -12,10 +12,17 @@ imagenes:
 ---
 
 ## Descripción
-Este proyecto define y despliega la infraestructura de un **e-commerce escalable**, utilizando **Terraform y Azure**.
+ Una organización enfocada al comercio en línea busca evolucionar su plataforma 
+con miras a la escalabilidad y la flexibilidad. Han definido ciertos requerimientos 
+que involucran ofrecer contenido estático, facilitar dos aplicaciones web distintas 
+para los usuarios (pública y administrativa), manejar tareas en segundo plano, 
+contar con un almacenamiento de archivos y un componente que acelere las 
+consultas más frecuentes. El objetivo es que yo como estudiante proponga 
+la manera de cumplir estos requerimientos a través de los servicios y la 
+infraestructura que considere más adecuados**.
 
-### **Componentes clave:**
-- 🌐 **Sitio estático:** Implementado con **Azure Static Web Apps** para ofrecer una experiencia rápida y optimizada utilizando Astro.js.
+### **Componentes que utilicé para resolver el proyecto:**
+- 🌐 **Sitio estático:** Implementado con **Azure Static Web Apps** para ofrecer una experiencia rápida y optimizada.
 - 💻 **Aplicaciones web:** Separadas en **FrontOffice** (cliente) y **BackOffice** (administrador), cada una con su propia **UI y API** desplegada en **Linux Web Apps**.
 - 🗄 **Base de datos SQL Server:** Almacena información estructurada y garantiza transacciones consistentes.
 - 📂 **Almacenamiento de archivos:** Implementado con **Azure Blob Storage** para gestionar imágenes de productos, facturas electrónicas y documentos de clientes.
@@ -41,6 +48,24 @@ Durante el desarrollo del proyecto, enfrenté varios retos que requirieron inves
 - 🏗 **Integración de Terraform con Azure:** Configuración de permisos y automatización del despliegue.
 - ⚡ **Procesamiento asíncrono con Azure Functions:** Adaptación de eventos de cola para mejorar la eficiencia.
 - 🔄 **Optimización del almacenamiento en Blob Storage:** Estrategias para organizar archivos y optimizar costos.
+
+## 🔗 Repositorios del Proyecto Terraform  
+
+📂 **Infraestructura y Servicios en Azure:**  
+
+- 🗂 **Almacenamiento y Mensajería**  
+  - 📦 **Repositorio:** [👉 Haz clic aquí](https://github.com/sosa22001/repositorio-a-terraform.git)  
+  - 🏗 **Incluye:** Azure Blob Storage y Azure Queue Storage para manejar archivos y tareas en segundo plano.  
+
+- 🌐 **Sitio Estático y Aplicaciones Web**  
+  - 🚀 **Repositorio:** [👉 Haz clic aquí](https://github.com/sosa22001/repositorio-b-terraform.git)  
+  - 🖥 **Incluye:** Azure Static Web App y Linux Web Apps para la UI y APIs del e-commerce.  
+
+- 🛢 **Base de Datos y Capa de Caché**  
+  - 🗄 **Repositorio:** [👉 Haz clic aquí](https://github.com/sosa22001/repositorio-c-terraform.git)  
+  - ⚡ **Incluye:** SQL Server y Azure Redis Cache para la gestión eficiente de datos y optimización del rendimiento.  
+
+
 
 ## Tecnologías utilizadas  
 - 🟢 Terraform
