@@ -44,16 +44,17 @@ El proyecto sigue una arquitectura distribuida basada en eventos:
 ### ✅ Muestreo Aleatorio
 
 - El usuario puede especificar un número máximo de registros (sample_size).
-- Si se define, la Azure Function usa `random.sample()` para limitar el tamaño del reporte de forma aleatoria y eficiente.
+- Si se define, la Azure Function usa random.sample() para limitar el tamaño del reporte de forma aleatoria y eficiente.
 
 ---
 
 ## 🧩 Desafíos y Soluciones
 
-- 🔄 **Integración entre FastAPI y Azure Function:** Resolver el traspaso de parámetros como sample_size entre capas.
-- ⚠️ **Errores de red WSL2 con Docker y Azure CLI:** Se resolvieron con reinicios controlados, reseteo de redes y uso de `SCOPE_IDENTITY()` en SQL.
-- 🧠 **Validación de tipos entre JSON, SQL y Python:** Se usaron Pydantic, conversión explícita a int, y logs para evitar errores silenciosos.
-- 📤 **Autenticación de subida a Blob Storage:** Se gestionó con credenciales almacenadas en .env y seguras con Azure Portal.
+- 🧱 Lograr que todos los componentes se comuniquen correctamente: Uno de los mayores retos fue conseguir que el frontend en Next.js, la API con FastAPI, la Azure Function y la base de datos trabajaran de forma fluida. Tuve que probar múltiples flujos de datos y ajustar detalles como el envío del sample_size y la generación dinámica de los reportes.
+
+- 🚀 Aprender e implementar recursos nuevos como Azure Queue y Functions: Era la primera vez que usaba Azure Queue Storage y Azure Functions en conjunto. Entender cómo se disparaban los procesos en segundo plano y cómo manejar errores de red o fallos silenciosos me tomó bastante prueba y error, pero al final logré automatizar todo el proceso de generación de reportes.
+
+- ⚙️ Desplegar toda la aplicación en Azure sin errores: Desde asegurar que las dependencias de Python estuvieran bien definidas hasta resolver conflictos entre WSL2, Docker y Azure CLI, el despliegue completo fue un verdadero rompecabezas. Tuve que investigar bastante, reiniciar servicios varias veces y aplicar soluciones como wsl --shutdown y SCOPE_IDENTITY() en SQL Server para evitar registros erróneos.
 
 ---
 
