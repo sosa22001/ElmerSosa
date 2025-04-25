@@ -224,6 +224,18 @@ export const proyectos: Proyecto[] = [
 
 export const experiences: Experience[] = [
   {
+    titulo: "Práctica Profesional de Ingeniería en Sistemas | GO CONSULTORES",
+    date: "abril 2025 - agosto 2025",
+    description: [
+      "Práctica profesional como parte del plan de estudios de la carrera de Ingeniería en Sistemas en la UNAH.",
+      "Asignado al área de desarrollo de software, participando activamente en la creación de proyectos de innovación tecnológica para la organización.",
+      "Desarrollo de aplicaciones web con tecnologías como Laravel, FastAPI y Azure, integrando servicios en la nube y arquitectura serverless.",
+      "Impartición de laboratorios en asignaturas como Sistemas Operativos I, Introducción a Ingeniería en Sistemas, y talleres de SQL Server, Java e Inteligencia Artificial (IA).",
+      "Supervisión técnica y mantenimiento preventivo/correctivo de equipos en cuatro laboratorios de cómputo."
+    ]
+  }
+  ,
+  {
     titulo: "Instructor Ingeniería En Sistemas | UNAH",
     date: "Septiembre 2023 - Diciembre 2024",
     description: [
