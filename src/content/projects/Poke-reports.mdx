@@ -1,0 +1,100 @@
+---
+title: "📊 Proyecto PokeQueue - Reportes Inteligentes con Azure"
+description: "Generación y gestión de reportes de Pokémon con arquitectura serverless y procesamiento en la nube usando Azure Functions, FastAPI, Blob Storage y Terraform."
+imagen: "/Proyecto PokeQueue/Diagrama Arquitectura.PNG"
+href: "/pokequeue"
+
+imagenes:
+  - "/assets/Proyecto PokeQueue/Diagrama Arquitectura.PNG"
+  - "/assets/Proyecto PokeQueue/front.PNG"
+  - "/assets/Proyecto PokeQueue/FOTO 3.PNG"
+---
+
+## Descripción General
+
+PokeQueue es una solución completa para la generación de reportes de Pokémon basada en arquitecturas modernas y escalables. El sistema permite seleccionar un tipo de Pokémon, generar reportes enriquecidos y almacenarlos automáticamente en la nube. Esta plataforma fue diseñada como parte de un reto académico para aplicar buenas prácticas de desarrollo web moderno, computación en la nube y automatización con infraestructura como código.
+
+---
+
+## 🏗 Arquitectura Utilizada
+
+El proyecto sigue una arquitectura distribuida basada en eventos:
+
+1. **Frontend (Next.js):** Interfaz para seleccionar el tipo de Pokémon y disparar el proceso.
+2. **API Backend (FastAPI):** Encargada de crear registros, responder peticiones y manejar estados de los reportes.
+3. **Azure Queue Storage:** Cola que dispara automáticamente una Azure Function al recibir un nuevo reporte.
+4. **Azure Function:** Se conecta a la PokeAPI, enriquece los datos, genera el CSV y lo almacena.
+5. **Azure Blob Storage:** Guarda el reporte CSV para descarga pública.
+6. **Azure SQL Database:** Guarda el estado y la metadata de los reportes.
+7. **Terraform:** Gestiona y despliega toda la infraestructura sobre Azure.
+
+## 🚀 Funcionalidades Implementadas
+
+### ✅ Eliminación de Reportes
+
+- Se agregó un botón de eliminar en el frontend.
+- El backend valida la existencia del reporte, elimina el CSV en Blob Storage y luego el registro en SQL.
+- Implementa control de errores para evitar inconsistencias.
+
+### ✅ Enriquecimiento del Reporte
+
+- El Worker Azure Function ahora obtiene estadísticas completas de cada Pokémon: HP, Ataque, Defensa, Velocidad, etc.
+- También extrae las habilidades y las concatena en una celda legible para análisis.
+
+### ✅ Muestreo Aleatorio
+
+- El usuario puede especificar un número máximo de registros (`sample_size`).
+- Si se define, la Azure Function usa `random.sample()` para limitar el tamaño del reporte de forma aleatoria y eficiente.
+
+---
+
+## 🧩 Desafíos y Soluciones
+
+- 🔄 **Integración entre FastAPI y Azure Function:** Resolver el traspaso de parámetros como `sample_size` entre capas.
+- ⚠️ **Errores de red WSL2 con Docker y Azure CLI:** Se resolvieron con reinicios controlados, reseteo de redes y uso de `SCOPE_IDENTITY()` en SQL.
+- 🧠 **Validación de tipos entre JSON, SQL y Python:** Se usaron `Pydantic`, conversión explícita a `int`, y logs para evitar errores silenciosos.
+- 📤 **Autenticación de subida a Blob Storage:** Se gestionó con credenciales almacenadas en `.env` y seguras con Azure Portal.
+
+---
+
+## 📁 Repositorios de Código Fuente
+
+- 🔧 **Infraestructura Terraform**  
+  [👉 GitHub](https://github.com/sosa22001/poke.terraform.git)
+
+- 🎯 **Frontend en Next.js**  
+  [👉 GitHub](https://github.com/sosa22001/poke.ui.git)
+
+- 🧠 **Backend FastAPI**  
+  [👉 GitHub](https://github.com/sosa22001/poke.queue.api.git)
+
+- ⚙️ **Azure Function (Worker)**  
+  [👉 GitHub](https://github.com/sosa22001/poke.functionApp.git)
+
+- 🛢 **Scripts SQL**  
+  [👉 GitHub](https://github.com/sosa22001/poke.queue.sql.git)
+
+---
+
+## 🌐 Enlaces al Sistema Desplegado
+
+- 🖥️ **Interfaz Web (UI):**  
+  [https://ui-pokequeue-dev-ijul.azurewebsites.net](https://ui-pokequeue-dev-ijul.azurewebsites.net)
+
+- 🔌 **API FastAPI:**  
+  [https://api-pokequeue-dev-ijul.azurewebsites.net](https://api-pokequeue-dev-ijul.azurewebsites.net)
+
+---
+
+## 📦 Tecnologías utilizadas
+
+- ⚛️ Next.js
+- 🐍 FastAPI
+- ☁️ Azure Functions
+- 🗃 Azure Blob Storage
+- 🐘 Azure SQL Database
+- 📬 Azure Queue Storage
+- 🔧 Terraform
+- 🐳 Docker
+
+---
