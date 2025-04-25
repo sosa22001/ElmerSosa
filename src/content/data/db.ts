@@ -229,9 +229,6 @@ export const experiences: Experience[] = [
     description: [
       "Práctica profesional como parte del plan de estudios de la carrera de Ingeniería en Sistemas en la UNAH.",
       "Asignado al área de desarrollo de software, participando activamente en la creación de proyectos de innovación tecnológica para la organización.",
-      "Desarrollo de aplicaciones web con tecnologías como Laravel, FastAPI y Azure, integrando servicios en la nube y arquitectura serverless.",
-      "Impartición de laboratorios en asignaturas como Sistemas Operativos I, Introducción a Ingeniería en Sistemas, y talleres de SQL Server, Java e Inteligencia Artificial (IA).",
-      "Supervisión técnica y mantenimiento preventivo/correctivo de equipos en cuatro laboratorios de cómputo."
     ]
   }
   ,
