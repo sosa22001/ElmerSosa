@@ -12,7 +12,7 @@ imagenes:
 
 ## Descripción General
 
-PokeQueue es una solución completa para la generación de reportes de Pokémon basada en arquitecturas modernas y escalables. El sistema permite seleccionar un tipo de Pokémon, generar reportes enriquecidos y almacenarlos automáticamente en la nube. Esta plataforma fue diseñada como parte de un reto académico para aplicar buenas prácticas de desarrollo web moderno, computación en la nube y automatización con infraestructura como código.
+Este proyecto es una solución continuada a un proyecto, en el cual tuve que llevar a práctica los conceptos antes visto sobre Queue Storage, Serverles para tener un proceso asincrono sobre generación de reportes enriquecidos de Pokemones y almacenarlos automaticamente en la nube en este caso en Azure.
 
 ---
 
@@ -38,13 +38,14 @@ El proyecto sigue una arquitectura distribuida basada en eventos:
 
 ### ✅ Enriquecimiento del Reporte
 
-- El Worker Azure Function ahora obtiene estadísticas completas de cada Pokémon: HP, Ataque, Defensa, Velocidad, etc.
-- También extrae las habilidades y las concatena en una celda legible para análisis.
+- La Azure Function ahora obtiene estadísticas completas de cada Pokémon: HP, Ataque, Defensa, Velocidad, etc provenientes de la PokeAPI.
+- También extrae las habilidades para poder guardarlas en un CSV.
 
 ### ✅ Muestreo Aleatorio
 
 - El usuario puede especificar un número máximo de registros (sample_size).
 - Si se define, la Azure Function usa random.sample() para limitar el tamaño del reporte de forma aleatoria y eficiente.
+- Si no se especifica entonces trae todos los registros un tipo de pokemon.
 
 ---
 
