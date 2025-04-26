@@ -51,9 +51,9 @@ El proyecto sigue una arquitectura distribuida basada en eventos:
 
 ## 🧩 Desafíos y Soluciones
 
-- 🧱 Lograr que todos los componentes se comuniquen correctamente: Uno de los mayores retos fue conseguir que el frontend en Next.js, la API con FastAPI, la Azure Function y la base de datos trabajaran de forma fluida. Tuve que probar múltiples flujos de datos y ajustar detalles como el envío del sample_size y la generación dinámica de los reportes.
+- 🧱 Lograr que todos los componentes se comuniquen correctamente: Uno de los mayores retos fue conseguir que el frontend en Next.js, la API con FastAPI, la Azure Function y la base de datos trabajaran de forma fluida.
 
-- 🚀 Aprender e implementar recursos nuevos como Azure Queue y Functions: Era la primera vez que usaba Azure Queue Storage y Azure Functions en conjunto. Entender cómo se disparaban los procesos en segundo plano y cómo manejar errores de red o fallos silenciosos me tomó bastante prueba y error, pero al final logré automatizar todo el proceso de generación de reportes.
+- 🚀 Aprender e implementar recursos nuevos como Azure Queue y Functions: Era la primera vez que usaba Azure Queue Storage y Azure Functions en conjunto. Entender cómo se disparaban los procesos en segundo plano y generar los reportes de manera que todo quedará funcional en la nube, fue uno de los mayores retos.
 
 ---
 
@@ -88,8 +88,8 @@ El proyecto sigue una arquitectura distribuida basada en eventos:
 
 ## 📦 Tecnologías utilizadas
 
-- ⚛️ Next.js
-- 🐍 FastAPI
+- ⚛️ Next.js y Reactjs
+- 🐍 FastAPI y Python
 - ☁️ Azure Functions
 - 🗃 Azure Blob Storage
 - 🐘 Azure SQL Database
