@@ -100,6 +100,12 @@ export const tecnologias: Tecnologias = {
       porcentaje: "45%",
       color: "purple-400",
     },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+      nombre: "Astro",
+      porcentaje: "50%",
+      color: "purple-400",
+    },
   ],
   Backend: [
     {
@@ -125,6 +131,12 @@ export const tecnologias: Tecnologias = {
       nombre: "Laravel",
       porcentaje: "50%",
       color: "red-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+      nombre: "Django",
+      porcentaje: "50%",
+      color: "green-300",
     },
   ],
   "Base de datos": [
@@ -201,6 +213,28 @@ export const tecnologias: Tecnologias = {
     {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
       nombre: "Azure",
+      porcentaje: "50%",
+      color: "blue-400",
+    },
+  ],
+  Metodologías: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg",
+      nombre: "DevOps",
+      porcentaje: "70%",
+      color: "orange-400",
+    },
+  ],
+  Lenguajes: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg",
+      nombre: "Java",
+      porcentaje: "60%",
+      color: "red-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      nombre: "Python",
       porcentaje: "50%",
       color: "blue-400",
     },
