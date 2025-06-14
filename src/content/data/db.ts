@@ -23,26 +23,32 @@ export const NavItems = [
   {
     id: "01",
     title: "Acerca de mí",
+    href: "acerca-de-mi",
   },
   {
     id: "02",
     title: "Habilidades",
+    href: "habilidades",
   },
   {
     id: "03",
     title: "Proyectos",
+    href: "proyectos",
   },
   {
     id: "04",
     title: "Experiencia",
+    href: "experiencia",
   },
   {
     id: "05",
     title: "Tecnologías",
+    href: "tecnologias",
   },
   {
     id: "06",
     title: "Contacto",
+    href: "contacto",
   },
 ];
 

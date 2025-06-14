@@ -24,7 +24,7 @@ import RedSocial from "./RedSocial.astro";
             {String(item.id).padStart(2, "0")}.
           </p>
           <a
-            href={`#${item.id}`}
+            href={`#${item.href}`}
             class="text-gray-300 hover:text-white font-medium"
           >
             {item.title}
@@ -36,3 +36,9 @@ import RedSocial from "./RedSocial.astro";
 
   <!-- Redes sociales -->
 </nav>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
