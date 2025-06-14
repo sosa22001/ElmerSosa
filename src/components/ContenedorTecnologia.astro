@@ -1,0 +1,27 @@
+---
+import type { Tecnologias } from "../interfaces/Interface";
+
+const { title, tecnologias } = Astro.props as Tecnologias;
+import Skill from "./Skill.astro";
+---
+
+<div>
+  {
+    (
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        {tecnologias.map((tec) => (
+          <div
+            class="w-12 h-12 hover:opacity-100 transition"
+            title={tec.nombre}
+          >
+            <img
+              src={tec.icon}
+              alt={tec.nombre}
+              class="w-full h-full object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>

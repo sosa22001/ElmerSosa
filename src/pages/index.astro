@@ -3,26 +3,69 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 import Cards from "../components/Cards.astro";
+import ExperienceTabs from "../components/ExperienceTabs.tsx";
 
-import { cards, tecnologias, habilidadesBlandas } from "../content/data/db.ts";
+import {
+  cards,
+  tecnologias,
+  habilidadesBlandas,
+  experiences,
+} from "../content/data/db.ts";
+
+// Aplana todas las sublistas en un solo array
+const todasLasTec = Object.values(tecnologias).flat();
 import SectionSkills from "../components/SectionSkills.astro";
+import ContenedorTecnologia from "../components/ContenedorTecnologia.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+
+//Definimos el tipo de datos que representan los proyectos
+type Project = CollectionEntry<"projects"> & { slug: string };
+
+//Obtengamos los proyectos.
+const proyectos: Project[] = (await getCollection("projects")) as Project[];
+
+import Project from "../components/Project.astro";
 ---
 
 <Layout>
   <div class="w-full h-full">
     <div
-      class="flex flex-col md:flex-row items-center md:items-start text-center gap-10 md:gap-20 mt-10 p-6"
+      class="flex flex-col md:flex-row text-center gap-10 md:gap-20 mt-10 p-6 justify-center items-center"
     >
-      <Cards
-        title={cards[0].title}
-        description={cards[0].description}
-        class="w-full md:w-96"
-      />
+      <div class="min-h-[60vh] flex flex-col text-left justify-center">
+        <h4 class="text-teal-300 text-lg font-mono mb-2">Hola, mi nombre es</h4>
+        <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-100 mb-2">
+          Elmer Sosa
+        </h1>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-400 mb-6">
+          Así que deseas saber sobre mí 👀
+        </h2>
+        <p class="max-w-xl text-gray-400 text-lg mb-8 text-left">
+          🚀 Como <span class="text-blue-400 font-semibold"
+            >estudiante de Ingeniería en Sistemas</span
+          >, soy un
+          <span class="text-green-400 font-semibold">
+            apasionado del desarrollo</span
+          > y la
+          <span class="text-yellow-400 font-semibold">
+            implementación de soluciones tecnológicas</span
+          >
+          que permiten a los negocios alcanzar el impacto que buscan.<br />
+          💻 Me especializo en el <span class="text-purple-400 font-semibold"
+            >desarrollo web full stack</span
+          >, trabajando con tecnologías de vanguardia. Tengo una gran capacidad
+          de aprendizaje 📚 para adaptarme a
+          <span class="text-pink-400 font-semibold"> nuevas tecnologías</span> y
+          desafíos.
+        </p>
+      </div>
+
       <Image
         src="/assets/elmer.jpg"
         alt="Elmer"
-        width={200}
-        height={200}
+        width={300}
+        height={300}
         class="rounded-lg shadow-lg border-2 border-gray-700 transition-all duration-300 hover:scale-105 hover:border-yellow-400"
       />
     </div>
@@ -38,11 +81,7 @@ import SectionSkills from "../components/SectionSkills.astro";
       aria-label="Descargar CV de Elmer Noé Sosa"
     >
       <!-- Ícono de Descarga -->
-      <svg
-        class="w-4 h-4 mr-2"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
+      <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
         <path
           d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"
         ></path>
@@ -85,6 +124,41 @@ import SectionSkills from "../components/SectionSkills.astro";
       </div>
     </section>
 
+    <!-- sección de experiencia -->
+    <section id="experience" class="max-w-4xl mx-auto my-16 px-4">
+      <h2 class="text-2xl font-bold mb-6">02. Experiencia</h2>
+      <ExperienceTabs experiencesProps={experiences} client:load />
+    </section>
+
+    <!-- sección de proyectos -->
+    <section class="p-10">
+      <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">
+        Proyectos
+      </h2>
+      <p class="text-lg text-left text-gray-300 mb-6 ml-2">
+        Aquí puedes ver algunos de los proyectos en los que he trabajado, cada
+        uno representando un paso en mi viaje de aprendizaje y desarrollo.
+      </p>
+      <div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto"
+        >
+          {
+            proyectos.map((proyecto) => (
+              <Project
+                title={proyecto.data.title}
+                urlImagen={proyecto.data.imagen}
+                description={proyecto.data.description}
+                href={`/projects/${proyecto.slug}`}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- sección de tecnologías -->
+
     <div class="p-10">
       <h2 class="text-4xl font-bold text-white text-left ml-2 mb-4">
         Tecnologías
@@ -102,18 +176,8 @@ import SectionSkills from "../components/SectionSkills.astro";
         desde la idea hasta su implementación.
       </p>
 
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto"
-      >
-        {
-          Object.entries(tecnologias).map(([tecnologia, tecnologias]) => (
-            <SectionSkills
-              title={tecnologia}
-              tecnologias={tecnologias}
-              class="w-full"
-            />
-          ))
-        }
+      <div class="grid grid-cols-1 gap-6 w-full max-w-5xl mx-auto">
+        <ContenedorTecnologia tecnologias={todasLasTec} />
       </div>
     </div>
   </div>

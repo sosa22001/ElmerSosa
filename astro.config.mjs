@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
+import react from '@astrojs/react';
 
 
 import mdx from "@astrojs/mdx";
@@ -14,7 +15,8 @@ export default defineConfig({
   integrations: [mdx({
     remarkPlugins: [],
     rehypePlugins: [],
-  })],
+
+  }), react()],
   markdown: {
     gfm: true, // Activa saltos de línea automáticos y tablas estilo GitHub,
     shikiConfig: {

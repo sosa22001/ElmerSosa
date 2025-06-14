@@ -19,6 +19,33 @@ export const Social: SocialMediaProps[] = [
   },
 ];
 
+export const NavItems = [
+  {
+    id: "01",
+    title: "Acerca de mí",
+  },
+  {
+    id: "02",
+    title: "Habilidades",
+  },
+  {
+    id: "03",
+    title: "Proyectos",
+  },
+  {
+    id: "04",
+    title: "Experiencia",
+  },
+  {
+    id: "05",
+    title: "Tecnologías",
+  },
+  {
+    id: "06",
+    title: "Contacto",
+  },
+];
+
 export const cards: MainCardsProps[] = [
   {
     description: `🚀 Como <span class="text-blue-400 font-semibold">estudiante de Ingeniería en Sistemas</span>, soy un
@@ -152,6 +179,32 @@ export const tecnologias: Tecnologias = {
       color: "",
     },
   ],
+  Infraestructura: [
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      nombre: "Docker",
+      porcentaje: "50%",
+      color: "blue-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      nombre: "AWS",
+      porcentaje: "50%",
+      color: "orange-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg",
+      nombre: "Terraform",
+      porcentaje: "50%",
+      color: "orange-400",
+    },
+    {
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+      nombre: "Azure",
+      porcentaje: "50%",
+      color: "blue-400",
+    },
+  ],
 };
 
 export const habilidadesBlandas: MainCardsProps[] = [
@@ -219,20 +272,21 @@ export const proyectos: Proyecto[] = [
             <span class="text-red-400 font-semibold">procesamiento asíncrono con Azure Functions</span> 
             y <span class="text-indigo-400 font-semibold">gestión eficiente de almacenamiento en Blob Storage</span>.`,
     href: "/congreso",
-}
+  },
 ];
 
 export const experiences: Experience[] = [
   {
+    empresa: "GO CONSULTORES",
     titulo: "Práctica Profesional de Ingeniería en Sistemas | GO CONSULTORES",
     date: "abril 2025 - agosto 2025",
     description: [
       "Práctica profesional como parte del plan de estudios de la carrera de Ingeniería en Sistemas en la UNAH.",
       "Asignado al área de desarrollo de software, participando activamente en la creación de proyectos de innovación tecnológica para la organización.",
-    ]
-  }
-  ,
+    ],
+  },
   {
+    empresa: "UNAH",
     titulo: "Instructor Ingeniería En Sistemas | UNAH",
     date: "Septiembre 2023 - Diciembre 2024",
     description: [
@@ -241,6 +295,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    empresa: "Erigo Ingeniería",
     titulo: "Consultor Jr | Erigo Ingeniería",
     date: "Junio 2024 (1 mes)",
     description: [
@@ -248,7 +303,8 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    titulo: " Diseñador y Fotográfo | Foto Estudio Liliam",
+    empresa: "Foto Estudio Liliam",
+    titulo: "Diseñador y Fotográfo | Foto Estudio Liliam",
     date: "Octubre 2019 - Febrero 2020",
     description: [
       "Diseño de cuadros personalizados para colegios y otras instituciones.",
